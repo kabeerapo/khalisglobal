@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Khalis Typing Center",
+      "hasCanvas": false,
+      "bodyTextLen": 3972,
+      "bodyTextHash": "7675c9daabf522c4beddf8bf4bc1f06a3148914a1fe36e901f6815a388d6fd9d",
+      "bodyTextPrefix": "KHALIS TYPING CENTER Services Process About Reviews Contact 050 ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Khalis Typing Center",
+      "hasCanvas": false,
+      "bodyTextLen": 3871,
+      "bodyTextHash": "b8686ba1fdb6247a32001a77387af6a6b962e0752db768ac6b955847c83710e1",
+      "bodyTextPrefix": "Abu Dhabi · 4.9★ · 858+ Google reviews Documents, licences and P",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
