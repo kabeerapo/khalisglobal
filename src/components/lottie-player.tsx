@@ -28,7 +28,7 @@ export function LottiePlayer({
   if (!ready) {
     return (
       <div
-        className={cn("bg-ink/5", className)}
+        className={cn("overflow-hidden bg-ink/5", className)}
         aria-hidden={!label}
         aria-label={label}
       />
@@ -36,13 +36,13 @@ export function LottiePlayer({
   }
 
   return (
-    <Lottie
-      src={src}
-      loop={loop && !reduce}
-      autoplay={!reduce}
-      className={className}
-      aria-hidden={!label}
-      aria-label={label}
-    />
+    <div className={cn("overflow-hidden", className)} aria-hidden={!label} aria-label={label}>
+      <Lottie
+        src={src}
+        loop={loop && !reduce}
+        autoplay={!reduce}
+        className="h-full w-full [&_svg]:h-full [&_svg]:w-full"
+      />
+    </div>
   );
 }

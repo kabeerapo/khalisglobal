@@ -29,6 +29,7 @@ import {
 } from "lucide-react";
 import { LottiePlayer } from "@/components/lottie-player";
 import { HeroVideo } from "@/components/hero-video";
+import { DeskMap } from "@/components/desk-map";
 import { cn } from "@/lib/utils";
 
 const PHONE = "050 120 1818";
@@ -58,7 +59,7 @@ const SERVICE_FILES = [
     category: "Government",
     Icon: Landmark,
     title: "PRO Services",
-    image: "/services/pro-desk.jpg",
+    image: "/services/pro-desk.webp",
     alt: "PRO officer completing a UAE application form at the Khalis desk",
     copy: "Khalis acts as your on-the-ground PRO. We handle labour contracts, establishment cards, immigration typing, and ministry submissions across Abu Dhabi — with a single point of contact and a clear timeline.",
     points: [
@@ -72,7 +73,7 @@ const SERVICE_FILES = [
     category: "Documents",
     Icon: FileText,
     title: "Typing Services",
-    image: "/services/typing-desk.jpg",
+    image: "/services/typing-desk.webp",
     alt: "Typist preparing official Arabic and English documents",
     copy: "Official paperwork in the UAE is unforgiving of typos. Our typists work in Arabic and English, match ministry templates, and review every field before you sign.",
     points: [
@@ -86,7 +87,7 @@ const SERVICE_FILES = [
     category: "Advisory",
     Icon: Briefcase,
     title: "Expert Business Consultation",
-    image: "/services/consult.jpg",
+    image: "/services/consult.webp",
     alt: "Business consultation between Khalis advisors in Abu Dhabi",
     copy: "Before a single form is typed, we sit with you. Activity lists, sponsor options, office requirements, and cost of stay are laid out plainly so you choose with confidence, not pressure.",
     points: [
@@ -100,7 +101,7 @@ const SERVICE_FILES = [
     category: "Legal",
     Icon: Scale,
     title: "Comprehensive Legal Support",
-    image: "/services/legal-desk.jpg",
+    image: "/services/legal-desk.webp",
     alt: "Legal documents, leather folio and glasses on a marble desk",
     copy: "From MOA drafting to document attestation and legal translation, we keep the legal track moving beside the government track — so your company is not waiting on a missing stamp.",
     points: [
@@ -114,7 +115,7 @@ const SERVICE_FILES = [
     category: "Residency",
     Icon: Plane,
     title: "Visa & Immigration",
-    image: "/services/visa-skyline.jpg",
+    image: "/services/visa-skyline.webp",
     alt: "Abu Dhabi skyline at sunset over the water",
     copy: "We manage the residency file end to end: entry permits, medical, Emirates ID, stamping, and dependent visas — sequenced so nobody is stuck in-country on an expired status.",
     points: [
@@ -128,7 +129,7 @@ const SERVICE_FILES = [
     category: "Identity",
     Icon: IdCard,
     title: "Emirates ID Services",
-    image: "/services/eid-passport.jpg",
+    image: "/services/eid-passport.webp",
     alt: "Passport and Emirates ID application being prepared",
     copy: "New, renewal, replacement, and amendment — Khalis types and submits your ICA file so the card lands without a wasted trip to the centre.",
     points: [
@@ -301,6 +302,58 @@ const HOURS = [
   ["Sunday", "Closed"],
 ];
 
+function useDeskOpen() {
+  const [open, setOpen] = useState(false);
+  const [label, setLabel] = useState("Checking hours");
+
+  useEffect(() => {
+    const tick = () => {
+      const parts = Object.fromEntries(
+        new Intl.DateTimeFormat("en-GB", {
+          timeZone: "Asia/Dubai",
+          weekday: "short",
+          hour: "numeric",
+          minute: "numeric",
+          hourCycle: "h23",
+        })
+          .formatToParts(new Date())
+          .map((p) => [p.type, p.value]),
+      );
+      const weekday = parts.weekday;
+      const minutes = Number(parts.hour) * 60 + Number(parts.minute);
+      const between = (start: number, end: number) => minutes >= start && minutes < end;
+      let isOpen = false;
+      let until = "";
+      if (weekday === "Sun") {
+        isOpen = false;
+      } else if (weekday === "Fri") {
+        if (between(8 * 60, 12 * 60)) {
+          isOpen = true;
+          until = "12 PM";
+        } else if (between(15 * 60, 21 * 60 + 30)) {
+          isOpen = true;
+          until = "9:30 PM";
+        }
+      } else if (weekday === "Sat") {
+        if (between(8 * 60, 20 * 60 + 30)) {
+          isOpen = true;
+          until = "8:30 PM";
+        }
+      } else if (between(8 * 60, 21 * 60 + 30)) {
+        isOpen = true;
+        until = "9:30 PM";
+      }
+      setOpen(isOpen);
+      setLabel(isOpen ? `Open now · until ${until}` : "Closed now · opens next shift");
+    };
+    tick();
+    const id = window.setInterval(tick, 60_000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  return { open, label };
+}
+
 function Nav() {
   const [open, setOpen] = useState(false);
 
@@ -308,7 +361,15 @@ function Nav() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-paper/10 bg-ink/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:h-20 sm:px-6">
         <a href="#home" className="flex items-center gap-3">
-          <img src="/logo.png" alt="" className="h-10 w-auto sm:h-12" />
+          <img
+            src="/logo.webp"
+            alt=""
+            width={360}
+            height={202}
+            className="h-10 w-auto sm:h-12"
+            fetchPriority="high"
+            decoding="async"
+          />
           <span className="hidden leading-tight sm:block">
             <span className="block font-display text-sm font-bold tracking-wide text-paper">
               KHALIS
@@ -375,6 +436,7 @@ function Nav() {
 function ContactForm({ preferredService = "" }: { preferredService?: string }) {
   const [sent, setSent] = useState(false);
   const [service, setService] = useState(preferredService);
+  const [waUrl, setWaUrl] = useState(WHATSAPP);
 
   useEffect(() => {
     if (preferredService) setService(preferredService);
@@ -382,29 +444,61 @@ function ContactForm({ preferredService = "" }: { preferredService?: string }) {
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const lines = [
+      `Hello Khalis — ${data.get("service") || "enquiry"}`,
+      `Name: ${data.get("name") || ""}`,
+      `Phone: ${data.get("phone") || ""}`,
+      data.get("email") ? `Email: ${data.get("email")}` : "",
+      data.get("message") ? String(data.get("message")) : "",
+    ].filter(Boolean);
+    const url = `${WHATSAPP}?text=${encodeURIComponent(lines.join("\n"))}`;
+    setWaUrl(url);
+    window.open(url, "_blank", "noopener,noreferrer");
     setSent(true);
   }
 
   if (sent) {
     return (
-      <div className="flex flex-col items-center py-6 text-center">
-        <LottiePlayer src="/lottie/success.json" className="h-40 w-full" label="Request sent" />
-        <p className="mt-2 font-display text-xl text-paper">We’ll call you shortly.</p>
-        <p className="mt-1 text-sm text-paper/70">Your request is with the Khalis desk.</p>
+      <div className="flex flex-col items-center py-4 text-center">
+        <LottiePlayer src="/lottie/success.json" className="h-28 w-28" label="Request sent" />
+        <p className="mt-2 font-display text-xl text-paper">WhatsApp is ready.</p>
+        <p className="mt-1 max-w-sm text-sm text-paper/70">
+          Your file details are in the chat. If nothing opened, tap below.
+        </p>
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-palm px-7 text-sm font-semibold text-paper transition-transform duration-150 ease-out hover:bg-palm/90 active:scale-95"
+        >
+          Open WhatsApp
+          <ArrowRight className="size-4" />
+        </a>
       </div>
     );
   }
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
-      <Field label="Full name" name="name" required />
-      <Field label="Phone / WhatsApp" name="phone" type="tel" required />
-      <Field label="Email" name="email" type="email" />
+      <div className="grid gap-4 sm:grid-cols-2">
+        <Field label="Full name" name="name" autoComplete="name" required placeholder="Your name" />
+        <Field
+          label="Phone / WhatsApp"
+          name="phone"
+          type="tel"
+          autoComplete="tel"
+          required
+          placeholder="05X XXX XXXX"
+        />
+      </div>
+      <Field label="Email" name="email" type="email" autoComplete="email" placeholder="Optional" />
       <label className="block">
         <span className="mb-1.5 block text-sm text-paper/70">Service needed</span>
         <select
           name="service"
           value={service}
+          required
           onChange={(e) => setService(e.target.value)}
           className="min-h-11 w-full rounded-xl border border-paper/15 bg-ink px-4 text-paper outline-none transition-colors duration-200 focus:border-gold"
         >
@@ -436,16 +530,19 @@ function ContactForm({ preferredService = "" }: { preferredService?: string }) {
           name="message"
           rows={4}
           className="w-full rounded-xl border border-paper/15 bg-ink px-4 py-3 text-paper outline-none transition-colors duration-200 focus:border-gold"
-          placeholder="Tell us how we can help"
+          placeholder="What needs typing, stamping, or filing?"
         />
       </label>
       <button
         type="submit"
         className="flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-palm font-semibold text-paper transition-transform duration-150 ease-out hover:bg-palm/90 active:scale-95"
       >
-        Send message
-        <ArrowRight className="size-4" />
+        <MessageCircle className="size-4" />
+        Send on WhatsApp
       </button>
+      <p className="text-center text-xs text-paper/55">
+        Opens WhatsApp to {PHONE}. We reply during working hours.
+      </p>
     </form>
   );
 }
@@ -455,11 +552,15 @@ function Field({
   name,
   type = "text",
   required,
+  autoComplete,
+  placeholder,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
+  autoComplete?: string;
+  placeholder?: string;
 }) {
   return (
     <label className="block">
@@ -468,9 +569,144 @@ function Field({
         name={name}
         type={type}
         required={required}
+        autoComplete={autoComplete}
+        inputMode={type === "tel" ? "tel" : undefined}
+        placeholder={placeholder}
         className="min-h-11 w-full rounded-xl border border-paper/15 bg-ink px-4 text-paper outline-none transition-colors duration-200 focus:border-gold"
       />
     </label>
+  );
+}
+
+function ContactSection({ preferredService }: { preferredService: string }) {
+  const desk = useDeskOpen();
+
+  return (
+    <section id="contact" className="bg-ink py-20 text-paper sm:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <p className="text-sm font-semibold tracking-widest text-gold uppercase">
+          Get in touch
+        </p>
+        <h2 className="mt-2 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+          Walk in, call, or send the file.
+        </h2>
+        <p
+          className={cn(
+            "mt-4 inline-flex min-h-11 items-center rounded-full px-4 text-sm font-semibold",
+            desk.open
+              ? "bg-palm/20 text-gold-soft"
+              : "bg-crimson/15 text-crimson",
+          )}
+        >
+          {desk.label}
+        </p>
+
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a
+            href={WHATSAPP}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-palm px-7 text-sm font-semibold text-paper transition-transform duration-150 ease-out hover:bg-palm/90 active:scale-95"
+          >
+            <MessageCircle className="size-4" />
+            WhatsApp {PHONE}
+          </a>
+          <a
+            href={`tel:${PHONE_TEL}`}
+            className="gold-plate gold-bevel inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-7 text-sm font-semibold transition-transform duration-150 ease-out active:scale-95"
+          >
+            <Phone className="size-4" />
+            Call the desk
+          </a>
+        </div>
+
+        <div className="mt-12 grid gap-10 lg:grid-cols-2">
+          <div className="space-y-5">
+            <article className="rounded-2xl border border-gold/25 p-5">
+              <div className="flex gap-3">
+                <MapPin className="mt-0.5 size-5 shrink-0 text-gold" />
+                <div>
+                  <p className="font-semibold">Muroor Road, Abu Dhabi</p>
+                  <p className="mt-1 text-sm leading-relaxed text-paper/70">
+                    Muroor 31 signal — Zafaranah st — Al Sa`Adah — Zone 1
+                  </p>
+                  <a
+                    href={MAPS}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-flex min-h-11 items-center text-sm font-semibold text-gold"
+                  >
+                    Open in Google Maps
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article className="rounded-2xl border border-gold/25 p-5">
+              <div className="flex gap-3">
+                <Mail className="mt-0.5 size-5 shrink-0 text-gold" />
+                <div>
+                  <p className="font-semibold">Email</p>
+                  <a
+                    href={`mailto:${EMAIL}`}
+                    className="mt-1 inline-flex min-h-11 items-center text-sm font-semibold text-gold"
+                  >
+                    {EMAIL}
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article className="rounded-2xl border border-gold/25 p-5">
+              <div className="flex gap-3">
+                <Clock className="mt-0.5 size-5 shrink-0 text-gold" />
+                <div className="w-full">
+                  <p className="mb-3 font-semibold">Working hours</p>
+                  <dl className="space-y-2 text-sm">
+                    {HOURS.map(([d, h]) => (
+                      <div key={d} className="flex justify-between gap-4">
+                        <dt className="text-paper/70">{d}</dt>
+                        <dd className={cn(h === "Closed" && "text-crimson")}>{h}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              </div>
+            </article>
+
+            <div className="flex flex-wrap gap-3">
+              {[
+                [INSTAGRAM, "Instagram"],
+                [FACEBOOK, "Facebook"],
+                [TIKTOK, "TikTok"],
+              ].map(([href, label]) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center rounded-full border border-gold/35 px-4 text-sm font-medium text-paper transition-colors duration-200 hover:border-gold hover:bg-gold/10"
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-gold/25 bg-ink p-6 sm:p-8 gold-ring gold-bevel">
+            <h3 className="font-display text-xl font-bold">Start a file</h3>
+            <p className="mt-1 mb-6 text-sm text-paper/70">
+              Tell us the service. We reply on WhatsApp during working hours.
+            </p>
+            <ContactForm preferredService={preferredService} />
+          </div>
+        </div>
+
+        <div className="mt-10">
+          <DeskMap mapsHref={MAPS} whatsapp={WHATSAPP} />
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -577,8 +813,12 @@ export function Landing() {
                 <img
                   src={item.image}
                   alt={item.alt}
+                  width={1200}
+                  height={900}
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"
+                  decoding="async"
+                  sizes="(min-width: 768px) 768px, 100vw"
                 />
               </div>
               <p className="mt-8 inline-flex items-center gap-2 text-sm font-semibold tracking-[0.18em] text-palm uppercase">
@@ -893,105 +1133,20 @@ export function Landing() {
         </div>
       </section>
 
-      <section id="contact" className="bg-ink py-20 text-paper sm:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-sm font-semibold tracking-widest text-gold uppercase">
-            Get in touch
-          </p>
-          <h2 className="mt-2 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-            Ready when you are
-          </h2>
-          <div className="mt-12 grid gap-12 lg:grid-cols-2">
-            <div>
-              <LottiePlayer
-                src="/lottie/contact.json"
-                className="mb-8 h-48 w-full max-w-sm"
-                label="Contact animation"
-              />
-              <ul className="space-y-6">
-                <li className="flex gap-4">
-                  <MapPin className="mt-0.5 size-5 shrink-0 text-gold" />
-                  <div>
-                    <p className="font-semibold">Muroor Road, Abu Dhabi</p>
-                    <p className="mt-1 text-sm leading-relaxed text-paper/70">
-                      Muroor 31 signal — Zafaranah st — Al Sa`Adah — Zone 1
-                    </p>
-                    <a
-                      href={MAPS}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-2 inline-flex min-h-11 items-center text-sm font-semibold text-gold"
-                    >
-                      Open in Google Maps
-                    </a>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <Phone className="mt-0.5 size-5 shrink-0 text-gold" />
-                  <div>
-                    <p className="font-semibold">Call / WhatsApp</p>
-                    <a href={`tel:${PHONE_TEL}`} className="text-lg font-semibold text-gold">
-                      {PHONE}
-                    </a>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <Mail className="mt-0.5 size-5 shrink-0 text-gold" />
-                  <div>
-                    <p className="font-semibold">Email</p>
-                    <a href={`mailto:${EMAIL}`} className="text-sm text-gold">
-                      {EMAIL}
-                    </a>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <Clock className="mt-0.5 size-5 shrink-0 text-gold" />
-                  <div className="w-full max-w-sm">
-                    <p className="mb-2 font-semibold">Working hours</p>
-                    <dl className="space-y-1 text-sm">
-                      {HOURS.map(([d, h]) => (
-                        <div key={d} className="flex justify-between gap-4">
-                          <dt className="text-paper/70">{d}</dt>
-                          <dd className={cn(h === "Closed" && "text-crimson")}>{h}</dd>
-                        </div>
-                      ))}
-                    </dl>
-                  </div>
-                </li>
-              </ul>
-              <div className="mt-8 flex gap-3">
-                {[
-                  [INSTAGRAM, "Instagram"],
-                  [FACEBOOK, "Facebook"],
-                  [TIKTOK, "TikTok"],
-                ].map(([href, label]) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex min-h-11 items-center rounded-full border border-gold/35 px-4 text-sm font-medium text-paper transition-colors duration-200 hover:border-gold hover:bg-gold/10"
-                  >
-                    {label}
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-2xl border border-gold/25 bg-ink p-6 sm:p-8 gold-ring gold-bevel">
-              <h3 className="font-display text-xl font-bold">Send a message</h3>
-              <p className="mt-1 mb-6 text-sm text-paper/70">
-                We reply on WhatsApp and phone during working hours.
-              </p>
-              <ContactForm preferredService={preferredService} />
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactSection preferredService={preferredService} />
 
       <footer className="border-t border-paper/10 bg-ink py-10 text-paper">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="" className="h-10 w-auto" />
+            <img
+              src="/logo.webp"
+              alt=""
+              width={360}
+              height={202}
+              className="h-10 w-auto"
+              loading="lazy"
+              decoding="async"
+            />
             <div>
               <p className="font-display text-sm font-bold">KHALIS TYPING CENTER</p>
               <p className="text-xs text-paper/60">Abu Dhabi, UAE</p>

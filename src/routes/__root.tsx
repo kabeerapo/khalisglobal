@@ -5,6 +5,11 @@ import appCss from "../styles.css?url";
 
 const APP_NAME = "Khalis Typing Center";
 
+const publicHost = String(import.meta.env.VITE_PUBLIC_HOSTNAME ?? "")
+  .trim()
+  .replace(/^https?:\/\//, "");
+const xBanner = publicHost ? `https://${publicHost}/x-banner.jpg` : undefined;
+
 const VIDEO_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
@@ -32,6 +37,13 @@ export const Route = createRootRoute({
           "Khalis Typing Center in Abu Dhabi — PRO services, typing, business setup, visa processing, document attestation and professional licensing.",
       },
       { name: "theme-color", content: "#0e1712" },
+      ...(xBanner
+        ? [
+            { property: "x:game:image", content: xBanner },
+            { property: "x:game:image:width", content: "1200" },
+            { property: "x:game:image:height", content: "264" },
+          ]
+        : []),
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },

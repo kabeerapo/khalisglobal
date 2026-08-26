@@ -31,7 +31,7 @@ export function HeroVideo() {
           ref={ref}
           className="aspect-[4/3] w-full object-cover lg:aspect-[5/4]"
           src="/khalis-hero.mp4"
-          poster="/poster-hero.jpg"
+          poster="/poster-hero.webp"
           autoPlay
           muted
           loop
