@@ -5,6 +5,21 @@ import appCss from "../styles.css?url";
 
 const APP_NAME = "Khalis Typing Center";
 
+const VIDEO_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "Khalis Typing Center Abu Dhabi — Emirates ID, Typing & PRO Services",
+  description:
+    "Office tour of Khalis Typing Center on Muroor Road, Abu Dhabi: Emirates ID services, official typing, PRO support, and expert business consultation.",
+  thumbnailUrl: "/poster-hero.jpg",
+  uploadDate: "2026-08-25",
+  duration: "PT20S",
+  contentUrl: "/khalis-hero.mp4",
+  embedUrl: "/#video",
+  transcript:
+    "Khalis Typing Center in Abu Dhabi. Emirates ID services, typing services, PRO support, and expert business consultation. Partner with Khalis — Muroor Road.",
+};
+
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -28,6 +43,12 @@ export const Route = createRootRoute({
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(VIDEO_SCHEMA),
       },
     ],
   }),

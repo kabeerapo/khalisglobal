@@ -2,8 +2,8 @@ import { i as __toESM, n as __exportAll } from "../_runtime.mjs";
 import { L as require_react, _ as useRouter, f as createRouter, g as createRootRoute, h as createFileRoute, l as Scripts, m as lazyRouteComponent, p as Outlet, u as HeadContent, v as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as TriangleAlert } from "../_libs/lucide-react.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-DzOIq5vG.js
-var router_DzOIq5vG_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-CXsjxIo6.js
+var router_CXsjxIo6_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function AppErrorComponent({ error }) {
@@ -272,8 +272,20 @@ function PreviewHostBridge() {
 	}, [router]);
 	return null;
 }
-var styles_default = "/assets/styles-Bv91mcCb.css";
+var styles_default = "/assets/styles-DC59V8CG.css";
 var APP_NAME = "Khalis Typing Center";
+var VIDEO_SCHEMA = {
+	"@context": "https://schema.org",
+	"@type": "VideoObject",
+	name: "Khalis Typing Center Abu Dhabi — Emirates ID, Typing & PRO Services",
+	description: "Office tour of Khalis Typing Center on Muroor Road, Abu Dhabi: Emirates ID services, official typing, PRO support, and expert business consultation.",
+	thumbnailUrl: "/poster-hero.jpg",
+	uploadDate: "2026-08-25",
+	duration: "PT20S",
+	contentUrl: "/khalis-hero.mp4",
+	embedUrl: "/#video",
+	transcript: "Khalis Typing Center in Abu Dhabi. Emirates ID services, typing services, PRO support, and expert business consultation. Partner with Khalis — Muroor Road."
+};
 var Route$1 = createRootRoute({
 	head: () => ({
 		meta: [
@@ -323,7 +335,11 @@ var Route$1 = createRootRoute({
 				rel: "stylesheet",
 				href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
 			}
-		]
+		],
+		scripts: [{
+			type: "application/ld+json",
+			children: JSON.stringify(VIDEO_SCHEMA)
+		}]
 	}),
 	component: () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("html", {
 		lang: "en",
@@ -338,7 +354,7 @@ var Route$1 = createRootRoute({
 		})]
 	})
 });
-var $$splitComponentImporter = () => import("./routes-jM8VfQqF.mjs");
+var $$splitComponentImporter = () => import("./routes-D5rT-LqB.mjs");
 var rootRouteChildren = { IndexRoute: createFileRoute("/")({ component: lazyRouteComponent($$splitComponentImporter, "component") }).update({
 	id: "/",
 	path: "/",
@@ -352,4 +368,4 @@ function getRouter() {
 	});
 }
 //#endregion
-export { getRouter, router_DzOIq5vG_exports as t };
+export { getRouter, router_CXsjxIo6_exports as t };
