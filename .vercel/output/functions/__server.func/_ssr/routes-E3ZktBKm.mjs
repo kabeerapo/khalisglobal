@@ -4,7 +4,7 @@ import { C as FileText, D as ArrowRight, E as Briefcase, S as IdCard, T as Circl
 import { t as Lottie } from "../_libs/lottie-react+lottie-web.mjs";
 import { t as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-D5rT-LqB.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-E3ZktBKm.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function cn(...inputs) {
@@ -595,36 +595,39 @@ function Landing() {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute right-0 top-24 h-40 w-40 bg-gold/15 blur-3xl" }),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "mx-auto grid max-w-6xl items-center gap-10 px-4 pb-16 sm:px-6 lg:grid-cols-2 lg:pb-24",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								className: "mb-4 inline-flex items-center gap-2 rounded-full gold-bevel border-gold/35 bg-gold/10 px-3 py-1 text-xs font-medium text-gold-soft",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "size-3.5 fill-gold text-gold" }), "Abu Dhabi · 4.9★ · 858+ Google reviews"]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-								className: "font-display text-4xl font-bold leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl",
-								children: ["Documents, licences and PRO —", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "gold-foil",
-									children: " handled as one file."
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-5 max-w-lg text-base leading-relaxed text-paper/75 sm:text-lg",
-								children: "Khalis Typing Center is your business desk on Muroor Road. Typing, attestation, visas, trade licences and professional licensing — without the runaround."
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "mt-8 flex flex-col gap-3 sm:flex-row",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-									href: "#contact",
-									className: "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-palm px-7 text-sm font-semibold text-paper transition-transform duration-150 ease-out hover:bg-palm/90 active:scale-95",
-									children: ["Get a consultation", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "size-4" })]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-									href: "#services",
-									className: "gold-plate gold-bevel inline-flex min-h-12 items-center justify-center rounded-full px-7 text-sm font-semibold transition-transform duration-150 ease-out active:scale-95",
-									children: "Browse services"
-								})]
-							})
-						] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "relative",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "hero-enter",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "mb-4 inline-flex items-center gap-2 rounded-full gold-bevel border-gold/35 bg-gold/10 px-3 py-1 text-xs font-medium text-gold-soft",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "size-3.5 fill-gold text-gold" }), "Abu Dhabi · 4.9★ · 858+ Google reviews"]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+									className: "font-display text-4xl font-bold leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl",
+									children: ["Documents, licences and PRO —", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "gold-foil",
+										children: " handled as one file."
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-5 max-w-lg text-base leading-relaxed text-paper/75 sm:text-lg",
+									children: "Khalis Typing Center is your business desk on Muroor Road. Typing, attestation, visas, trade licences and professional licensing — without the runaround."
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "mt-8 flex flex-col gap-3 sm:flex-row",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+										href: "#contact",
+										className: "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-palm px-7 text-sm font-semibold text-paper transition-transform duration-150 ease-out hover:bg-palm/90 active:scale-95",
+										children: ["Get a consultation", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "size-4" })]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+										href: "#services",
+										className: "gold-plate gold-bevel inline-flex min-h-12 items-center justify-center rounded-full px-7 text-sm font-semibold transition-transform duration-150 ease-out active:scale-95",
+										children: "Browse services"
+									})]
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "hero-media relative",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeroVideo, {})
 						})]
 					})
@@ -665,7 +668,7 @@ function Landing() {
 						className: "mx-auto mt-16 max-w-3xl space-y-20 px-4 sm:mt-20 sm:px-6",
 						children: SERVICE_FILES.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
 							id: item.id,
-							className: "scroll-mt-24",
+							className: "reveal scroll-mt-24",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "overflow-hidden rounded-3xl bg-ink/5",
@@ -752,9 +755,9 @@ function Landing() {
 						className: "text-center font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl",
 						children: "Three simple steps to grow your business"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-10 grid gap-5 md:mt-14 md:grid-cols-3",
+						className: "mt-10 grid gap-5 reveal-stagger md:mt-14 md:grid-cols-3",
 						children: STEPS.map((step) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
-							className: "flex flex-col rounded-2xl bg-paper p-6 text-ink shadow-lg sm:p-8",
+							className: "lift reveal flex flex-col rounded-2xl bg-paper p-6 text-ink shadow-lg sm:p-8",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 									className: "inline-flex size-14 items-center justify-center rounded-full border-2 border-palm text-palm",
@@ -804,9 +807,9 @@ function Landing() {
 							children: "The stamp is not the finish line. After the trade licence lands, Khalis sets up the channels that bring the next file in — Maps, search, social, WhatsApp, and ads you can actually measure."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3",
+							className: "mt-12 grid gap-5 reveal-stagger sm:grid-cols-2 lg:grid-cols-3",
 							children: MARKETING.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
-								className: "flex flex-col rounded-2xl border border-gold/20 bg-paper p-6",
+								className: "lift reveal flex flex-col rounded-2xl border border-gold/20 bg-paper p-6",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										className: "inline-flex size-12 items-center justify-center rounded-full border-2 border-palm text-palm",
@@ -893,9 +896,9 @@ function Landing() {
 							})]
 						})
 					] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", {
-						className: "grid gap-4 sm:grid-cols-2",
+						className: "grid gap-4 reveal-stagger sm:grid-cols-2",
 						children: WA_TACTICS.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-							className: "flex flex-col rounded-2xl border border-gold/25 bg-ink p-5 gold-ring",
+							className: "lift reveal flex flex-col rounded-2xl border border-gold/25 bg-ink p-5 gold-ring",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "flex items-center justify-between gap-3",
@@ -995,9 +998,9 @@ function Landing() {
 							children: "Leave a Google review"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "mt-10 grid gap-5 md:grid-cols-3",
+							className: "mt-10 grid gap-5 reveal-stagger md:grid-cols-3",
 							children: REVIEWS.map((r) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("blockquote", {
-								className: "rounded-2xl border border-gold/20 bg-paper p-6",
+								className: "lift reveal rounded-2xl border border-gold/20 bg-paper p-6",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 										className: "mb-3 flex gap-0.5 text-gold",
@@ -1179,7 +1182,7 @@ function Landing() {
 				href: WHATSAPP,
 				target: "_blank",
 				rel: "noopener noreferrer",
-				className: "fixed right-4 bottom-4 z-50 inline-flex min-h-12 items-center gap-2 rounded-full bg-palm px-5 text-sm font-semibold text-paper shadow-lg transition-transform duration-150 ease-out hover:bg-palm/90 active:scale-95",
+				className: "wa-pulse fixed right-4 bottom-4 z-50 inline-flex min-h-12 items-center gap-2 rounded-full bg-palm px-5 text-sm font-semibold text-paper shadow-lg transition-transform duration-150 ease-out hover:bg-palm/90 active:scale-95",
 				"aria-label": "WhatsApp Khalis",
 				children: "WhatsApp"
 			})

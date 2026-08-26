@@ -510,7 +510,7 @@ export function Landing() {
         <div className="pointer-events-none absolute inset-x-0 top-0 h-1 gold-hairline" />
         <div className="pointer-events-none absolute right-0 top-24 h-40 w-40 bg-gold/15 blur-3xl" />
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-16 sm:px-6 lg:grid-cols-2 lg:pb-24">
-          <div className="hero-enter">
+          <div>
             <p className="mb-4 inline-flex items-center gap-2 rounded-full gold-bevel border-gold/35 bg-gold/10 px-3 py-1 text-xs font-medium text-gold-soft">
               <Star className="size-3.5 fill-gold text-gold" />
               Abu Dhabi · 4.9★ · 858+ Google reviews
@@ -540,7 +540,7 @@ export function Landing() {
               </a>
             </div>
           </div>
-          <div className="hero-media relative">
+          <div className="relative">
             <HeroVideo />
           </div>
         </div>
@@ -572,7 +572,7 @@ export function Landing() {
 
         <div className="mx-auto mt-16 max-w-3xl space-y-20 px-4 sm:mt-20 sm:px-6">
           {SERVICE_FILES.map((item) => (
-            <article key={item.id} id={item.id} className="reveal scroll-mt-24">
+            <article key={item.id} id={item.id} className="scroll-mt-24">
               <div className="overflow-hidden rounded-3xl bg-ink/5">
                 <img
                   src={item.image}
@@ -648,11 +648,11 @@ export function Landing() {
           <h2 className="text-center font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
             Three simple steps to grow your business
           </h2>
-          <div className="mt-10 grid gap-5 reveal-stagger md:mt-14 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:mt-14 md:grid-cols-3">
             {STEPS.map((step) => (
               <article
                 key={step.n}
-                className="lift reveal flex flex-col rounded-2xl bg-paper p-6 text-ink shadow-lg sm:p-8"
+                className="flex flex-col rounded-2xl bg-paper p-6 text-ink shadow-lg sm:p-8"
               >
                 <span className="inline-flex size-14 items-center justify-center rounded-full border-2 border-palm text-palm">
                   <step.Icon className="size-6" strokeWidth={1.75} />
@@ -695,11 +695,11 @@ export function Landing() {
             sets up the channels that bring the next file in — Maps, search, social,
             WhatsApp, and ads you can actually measure.
           </p>
-          <div className="mt-12 grid gap-5 reveal-stagger sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {MARKETING.map((item) => (
               <article
                 key={item.title}
-                className="lift reveal flex flex-col rounded-2xl border border-gold/20 bg-paper p-6"
+                className="flex flex-col rounded-2xl border border-gold/20 bg-paper p-6"
               >
                 <span className="inline-flex size-12 items-center justify-center rounded-full border-2 border-palm text-palm">
                   <item.Icon className="size-5" strokeWidth={1.75} />
@@ -780,11 +780,11 @@ export function Landing() {
               </a>
             </div>
           </div>
-          <ol className="grid gap-4 reveal-stagger sm:grid-cols-2">
+          <ol className="grid gap-4 sm:grid-cols-2">
             {WA_TACTICS.map((item) => (
               <li
                 key={item.n}
-                className="lift reveal flex flex-col rounded-2xl border border-gold/25 bg-ink p-5 gold-ring"
+                className="flex flex-col rounded-2xl border border-gold/25 bg-ink p-5 gold-ring"
               >
                 <div className="flex items-center justify-between gap-3">
                   <span className="inline-flex size-10 items-center justify-center rounded-full border border-palm text-palm">
@@ -862,11 +862,11 @@ export function Landing() {
           >
             Leave a Google review
           </a>
-          <div className="mt-10 grid gap-5 reveal-stagger md:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
             {REVIEWS.map((r) => (
               <blockquote
                 key={r.name}
-                className="lift reveal rounded-2xl border border-gold/20 bg-paper p-6"
+                className="rounded-2xl border border-gold/20 bg-paper p-6"
               >
                 <div className="mb-3 flex gap-0.5 text-gold">
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -1005,7 +1005,7 @@ export function Landing() {
         href={WHATSAPP}
         target="_blank"
         rel="noopener noreferrer"
-        className="wa-pulse fixed right-4 bottom-4 z-50 inline-flex min-h-12 items-center gap-2 rounded-full bg-palm px-5 text-sm font-semibold text-paper shadow-lg transition-transform duration-150 ease-out hover:bg-palm/90 active:scale-95"
+        className="fixed right-4 bottom-4 z-50 inline-flex min-h-12 items-center gap-2 rounded-full bg-palm px-5 text-sm font-semibold text-paper shadow-lg transition-transform duration-150 ease-out hover:bg-palm/90 active:scale-95"
         aria-label="WhatsApp Khalis"
       >
         WhatsApp
