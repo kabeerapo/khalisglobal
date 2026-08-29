@@ -1,47 +1,26 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { useLazyVideo } from "@/lib/use-lazy-video";
 
 export function HeroVideo() {
   const ref = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = ref.current;
-    if (!video) return;
-
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const apply = () => {
-      if (mq.matches) {
-        video.pause();
-        video.currentTime = 0;
-        return;
-      }
-      void video.play().catch(() => {
-        /* Autoplay can be blocked until a gesture; poster stays visible. */
-      });
-    };
-
-    apply();
-    mq.addEventListener("change", apply);
-    return () => mq.removeEventListener("change", apply);
-  }, []);
+  useLazyVideo(ref, { src: "/khalis-office.mp4", mode: "autoplay" });
 
   return (
     <figure id="video" className="relative">
-      <div className="overflow-hidden rounded-2xl border border-gold/25 bg-ink gold-ring gold-bevel">
+      <div className="overflow-hidden rounded-2xl border border-ink/10 bg-mist">
         <video
           ref={ref}
           className="aspect-[4/3] w-full object-cover lg:aspect-[5/4]"
-          src="/khalis-hero.mp4"
-          poster="/poster-hero.webp"
-          autoPlay
+          poster="/poster-office.webp"
           muted
           loop
           playsInline
-          preload="auto"
-          aria-label="Khalis Typing Center office tour — Emirates ID, typing and PRO services"
+          preload="none"
+          aria-label="Khalis Typing Center office — Emirates ID, typing, PRO and business setup"
         />
       </div>
-      <figcaption className="mt-3 text-sm text-paper/65">
-        Office tour · Emirates ID · Typing · PRO services
+      <figcaption className="mt-3 text-sm text-muted">
+        Office film · Emirates ID · Typing · PRO · Partner with Khalis
       </figcaption>
     </figure>
   );

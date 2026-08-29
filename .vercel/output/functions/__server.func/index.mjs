@@ -14,7 +14,8 @@ var install_page_default = "<!DOCTYPE html>\n<html lang=\"en\" class=\"device-de
 var grokOgIdentity = { "site": {
 	"title": "Khalis Typing Center",
 	"card": "custom",
-	"image": "/og.jpg"
+	"image": "/og.jpg",
+	"banner": "/x-banner.jpg"
 } };
 //#endregion
 //#region scripts/grok-pwa-shared.mjs

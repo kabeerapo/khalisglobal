@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #f3efe6;
-  --color-ink: #0e1712;
-  --color-muted: #5c6b62;
-  --color-palm: #1a7a4c;
-  --color-crimson: #b91c2c;
-  --color-gold: #c9a24a;
-  --color-gold-soft: #e8d5a3;
-  --color-gold-deep: #8c6a22;
-  --color-gold-pale: #f3e8c9;
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --color-paper: #ffffff;
+  --color-mist: #f6f6f6;
+  --color-ink: #1a1a1a;
+  --color-muted: #666666;
+  --color-palm: #00665c;
+  --color-palm-mid: #00998a;
+  --color-palm-bright: #00e5d1;
+  --color-crimson: #e51717;
+  --color-gold: #00998a;
+  --color-gold-soft: #00e5d1;
+  --color-gold-deep: #00665c;
+  --color-gold-pale: #e5fcfd;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
@@ -22,10 +25,22 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 4.75rem;
+    scroll-timeline: --page block;
+  }
+
+  html.js-scrolling {
+    scroll-behavior: auto;
+  }
+
+  @media (min-width: 640px) {
+    html {
+      scroll-padding-top: 5.75rem;
+    }
   }
 
   body {
-    background: var(--color-paper);
+    background: var(--color-mist);
     color: var(--color-ink);
     font-family: var(--font-sans);
   }
@@ -51,7 +66,7 @@
     position: fixed;
     inset: 0;
     z-index: 80;
-    opacity: 0.05;
+    opacity: 0.025;
     mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
     background-size: 180px 180px;
@@ -97,14 +112,13 @@
     background:
       linear-gradient(
         90deg,
-        #6f5218 0%,
-        #c9a24a 14%,
-        #f3e8c9 28%,
-        #a07a2e 42%,
-        #e8d5a3 56%,
-        #c9a24a 72%,
-        #8c6a22 86%,
-        #f3e8c9 100%
+        #004d47 0%,
+        #00998a 18%,
+        #00e5d1 36%,
+        #00665c 54%,
+        #00e5d1 72%,
+        #00998a 88%,
+        #004d47 100%
       );
     background-size: 220% 100%;
     animation: gold-shift 10s ease-in-out infinite;
@@ -128,13 +142,12 @@
   .gold-foil {
     background-image: linear-gradient(
       115deg,
-      #8c6a22 0%,
-      #e8d5a3 16%,
-      #c9a24a 32%,
-      #fff6d6 48%,
-      #a07a2e 64%,
-      #e8d5a3 80%,
-      #8c6a22 100%
+      #004d47 0%,
+      #00e5d1 22%,
+      #00998a 44%,
+      #e5fcfd 58%,
+      #00665c 78%,
+      #00e5d1 100%
     );
     background-size: 220% auto;
     -webkit-background-clip: text;
@@ -155,13 +168,13 @@
     background:
       linear-gradient(
         145deg,
-        #8c6a22 0%,
-        #c9a24a 28%,
-        #f3e8c9 50%,
-        #c9a24a 72%,
-        #8c6a22 100%
+        #004d47 0%,
+        #00998a 32%,
+        #00e5d1 50%,
+        #00998a 72%,
+        #00665c 100%
       );
-    color: var(--color-ink);
+    color: #1a1a1a;
   }
 
   .gold-plate::before {
@@ -240,6 +253,21 @@
     animation: fade-up 700ms 180ms cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
+  .scroll-progress {
+    pointer-events: none;
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    background: var(--color-palm);
+  }
+
+  .hero-parallax {
+    will-change: transform;
+  }
+
   .lift {
     transition:
       transform 200ms ease-out,
@@ -261,21 +289,50 @@
 
   @supports (animation-timeline: view()) {
     .reveal {
-      animation: fade-up 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+      animation: fade-up-scroll linear both;
       animation-timeline: view();
-      animation-range: entry 0% cover 28%;
+      animation-range: entry 0% cover 32%;
+    }
+
+    .reveal-stagger > * {
+      animation: fade-up-scroll linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 34%;
     }
 
     .reveal-stagger > *:nth-child(1) {
-      animation-range: entry 0% cover 24%;
+      animation-range: entry 0% cover 28%;
     }
 
     .reveal-stagger > *:nth-child(2) {
-      animation-range: entry 4% cover 30%;
+      animation-range: entry 6% cover 34%;
     }
 
     .reveal-stagger > *:nth-child(3) {
-      animation-range: entry 8% cover 36%;
+      animation-range: entry 12% cover 40%;
+    }
+
+    .reveal-stagger > *:nth-child(4) {
+      animation-range: entry 18% cover 46%;
+    }
+
+    .hero-parallax {
+      animation: hero-parallax linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+  }
+
+  @supports (animation-timeline: scroll()) {
+    .scroll-progress {
+      animation: scroll-progress linear both;
+      animation-timeline: scroll();
+    }
+  }
+
+  @supports (animation-timeline: --page) {
+    .scroll-progress {
+      animation-timeline: --page;
     }
   }
 }
@@ -313,6 +370,35 @@
   }
 }
 
+@keyframes fade-up-scroll {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-parallax {
+  from {
+    transform: scale(1.04) translateY(0);
+  }
+  to {
+    transform: scale(1.12) translateY(10%);
+  }
+}
+
+@keyframes scroll-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 @keyframes leaf-drift {
   0%,
   100% {
@@ -344,9 +430,21 @@
   .tex-leaves,
   .hero-enter > *,
   .hero-media,
+  .hero-parallax,
   .reveal,
+  .reveal-stagger > *,
+  .scroll-progress,
   .wa-pulse {
     animation: none;
+  }
+
+  .hero-parallax {
+    transform: none;
+    will-change: auto;
+  }
+
+  .scroll-progress {
+    transform: none;
   }
 
   .gold-plate::after,

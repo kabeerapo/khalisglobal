@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khalis Typing Center | Trusted Business Partner in UAE</title>
+  <meta name="description" content="Khalis Typing Center in Abu Dhabi - Professional PRO services, typing, business setup, document attestation, Emirates ID, visa processing and more. Your trusted partner for seamless documentation and solutions.">
+  <link rel="icon" href="logo.png" type="image/png">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            khalis: {
+              red: '#B91C2C',
+              green: '#0D7A4F',
+              dark: '#0A1210',
+              ink: '#12201A',
+              cream: '#F6F1E8',
+              sand: '#EDE6D9',
+              gold: '#C4A35A',
+              muted: '#5C6B62'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            display: ['Cormorant Garamond', 'Georgia', 'serif']
+          },
+          boxShadow: {
+            soft: '0 10px 40px -12px rgba(10, 18, 16, 0.12)',
+            lift: '0 24px 48px -16px rgba(13, 122, 79, 0.28)',
+            glow: '0 0 0 1px rgba(13, 122, 79, 0.15), 0 20px 50px -20px rgba(13, 122, 79, 0.35)'
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'slide-up': 'slideUp 0.8s ease-out forwards',
+            'fade-in': 'fadeIn 1s ease-out forwards',
+            'scale-in': 'scaleIn 0.6s ease-out forwards',
+            'gradient': 'gradient 8s ease infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' }
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            scaleIn: {
+              '0%': { opacity: '0', transform: 'scale(0.9)' },
+              '100%': { opacity: '1', transform: 'scale(1)' }
+            },
+            gradient: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: #F6F1E8;
+      color: #12201A;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-display {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: -0.02em;
+      font-weight: 600;
+    }
+    ::selection {
+      background: rgba(13, 122, 79, 0.2);
+      color: #0A1210;
+    }
+
+    .video-frame {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 1.25rem;
+      background: #0A1210;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+    .video-frame iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #EDE6D9; }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #0D7A4F, #0A1210);
+      border-radius: 999px;
+      border: 2px solid #EDE6D9;
+    }
+
+    .hero-gradient {
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 20%, rgba(13,122,79,0.35), transparent 55%),
+        radial-gradient(ellipse 70% 50% at 85% 15%, rgba(185,28,44,0.22), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 70% 90%, rgba(196,163,90,0.12), transparent 45%),
+        linear-gradient(165deg, #070d0b 0%, #0f1f18 45%, #0A1210 100%);
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(20px) saturate(1.2);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 20px 50px -24px rgba(0,0,0,0.5);
+    }
+
+    .service-card {
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                  box-shadow 0.35s ease,
+                  border-color 0.35s ease;
+      border: 1px solid rgba(18, 32, 26, 0.08);
+      background: #FFFcf7;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 28px 50px -20px rgba(13, 122, 79, 0.22);
+      border-color: rgba(13, 122, 79, 0.25);
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: linear-gradient(90deg, #B91C2C, #0D7A4F);
+      border-radius: 2px;
+      transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .floating-shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.45;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    .pulse-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1.5px solid rgba(13, 122, 79, 0.35);
+      animation: pulse-ring 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.85); opacity: 0.9; }
+      100% { transform: scale(1.7); opacity: 0; }
+    }
+
+    .animated-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .animated-bg::before {
+      content: '';
+      position: absolute;
+      width: 180%;
+      height: 180%;
+      top: -40%;
+      left: -40%;
+      background:
+        radial-gradient(circle at 25% 35%, rgba(13,122,79,0.18) 0%, transparent 42%),
+        radial-gradient(circle at 75% 65%, rgba(185,28,44,0.12) 0%, transparent 38%),
+        radial-gradient(circle at 55% 15%, rgba(196,163,90,0.1) 0%, transparent 40%);
+      animation: rotate-bg 32s linear infinite;
+    }
+    @keyframes rotate-bg {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .star-filled { color: #C4A35A; }
+
+    .mobile-menu {
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+
+    .form-input {
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+    .form-input:focus {
+      box-shadow: 0 0 0 3px rgba(13, 122, 79, 0.25);
+      border-color: #0D7A4F !important;
+    }
+
+    .spinner {
+      border: 3px solid rgba(255,255,255,0.25);
+      border-top-color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0D7A4F 0%, #0A5C3B 100%);
+      box-shadow: 0 12px 28px -10px rgba(13, 122, 79, 0.55);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+    .btn-primary:hover {
+      filter: brightness(1.08);
+      box-shadow: 0 16px 36px -10px rgba(13, 122, 79, 0.65);
+      transform: translateY(-1px);
+    }
+    .btn-primary:active { transform: scale(0.97); }
+
+    .section-eyebrow {
+      letter-spacing: 0.2em;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .card-shine {
+      position: relative;
+      overflow: hidden;
+    }
+    .card-shine::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.08) 50%, transparent 70%);
+      transform: translateX(-120%);
+      transition: transform 0.7s ease;
+      pointer-events: none;
+    }
+    .card-shine:hover::after { transform: translateX(120%); }
+
+    #navbar.nav-solid {
+      background: rgba(10, 18, 16, 0.92) !important;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 40px -20px rgba(0,0,0,0.5);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .floating-shape, .animated-bg::before, .pulse-ring, .hero-gradient {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-khalis-cream text-khalis-ink overflow-x-hidden">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <img src="logo.png" alt="Khalis Logo" class="h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+          <div class="hidden sm:block">
+            <span class="font-display font-bold text-lg text-white tracking-tight">KHALIS</span>
+            <span class="block text-xs text-green-400 font-medium -mt-1">TYPING CENTER</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#home" class="nav-link text-white/90 hover:text-white text-sm font-medium">Home</a>
+          <a href="#services" class="nav-link text-white/90 hover:text-white text-sm font-medium">Services</a>
+          <a href="#gov" class="nav-link text-white/90 hover:text-white text-sm font-medium">Gov Services</a>
+          <a href="#uae-videos" class="nav-link text-white/90 hover:text-white text-sm font-medium">UAE Videos</a>
+          <a href="#process" class="nav-link text-white/90 hover:text-white text-sm font-medium">How It Works</a>
+          <a href="#about" class="nav-link text-white/90 hover:text-white text-sm font-medium">About</a>
+          <a href="#reviews" class="nav-link text-white/90 hover:text-white text-sm font-medium">Reviews</a>
+          <a href="#contact" class="nav-link text-white/90 hover:text-white text-sm font-medium">Contact</a>
+        </div>
+        
+        <!-- CTA + Mobile Toggle -->
+        <div class="flex items-center gap-4">
+          <a href="tel:+971501201818" class="btn-primary hidden sm:flex items-center gap-2 text-white px-5 py-2.5 rounded-full text-sm font-semibold">
+            <i class="fas fa-phone-alt text-xs"></i>
+            050 120 1818
+          </a>
+          <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Toggle menu">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="lg:hidden mobile-menu max-h-0 opacity-0 overflow-hidden">
+        <div class="py-4 space-y-3 border-t border-white/10">
+          <a href="#home" class="block text-white/90 hover:text-white py-2 text-sm font-medium">Home</a>
+          <a href="#services" class="block text-white/90 hover:text-white py-2 text-sm font-medium">Services</a>
+          <a href="#gov" class="block text-white/90 hover:text-white py-2 text-sm font-medium">Gov Services</a>
+          <a href="#uae-videos" class="block text-white/90 hover:text-white py-2 text-sm font-medium">UAE Videos</a>
+          <a href="#process" class="block text-white/90 hover:text-white py-2 text-sm font-medium">How It Works</a>
+          <a href="#about" class="block text-white/90 hover:text-white py-2 text-sm font-medium">About</a>
+          <a href="#reviews" class="block text-white/90 hover:text-white py-2 text-sm font-medium">Reviews</a>
+          <a href="#contact" class="block text-white/90 hover:text-white py-2 text-sm font-medium">Contact</a>
+          <a href="tel:+971501201818" class="flex items-center gap-2 bg-khalis-green text-white px-5 py-3 rounded-full text-sm font-semibold w-fit mt-2">
+            <i class="fas fa-phone-alt text-xs"></i>
+            Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="home" class="relative min-h-screen flex items-center hero-gradient overflow-hidden">
+    <!-- Animated background layers -->
+    <div class="animated-bg"></div>
+    
+    <!-- Floating shapes -->
+    <div class="floating-shape w-96 h-96 bg-khalis-green top-20 -left-20"></div>
+    <div class="floating-shape w-80 h-80 bg-khalis-red bottom-10 right-10" style="animation-delay: -3s;"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left content -->
+        <div class="text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
+          <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-6">
+            <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+            <span class="text-green-300 text-sm font-medium">Trusted in Abu Dhabi • 4.9★ (858+ Reviews)</span>
+          </div>
+          
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+            Your Trusted<br>
+            <span class="bg-gradient-to-r from-green-400 via-emerald-300 to-green-400 bg-clip-text text-transparent">Business Partner</span><br>
+            in the UAE
+          </h1>
+          
+          <p class="text-lg text-slate-300 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            From typing & documentation to PRO services, business setup, visa processing and professional licensing — we handle it all with speed, accuracy and care.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="#contact" class="btn-primary inline-flex items-center justify-center gap-2 text-white px-8 py-4 rounded-full font-semibold text-base">
+              <i class="fas fa-rocket"></i>
+              Get Free Consultation
+            </a>
+            <a href="#services" class="inline-flex items-center justify-center gap-2 bg-white/8 hover:bg-white/15 text-white px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 border border-white/25 backdrop-blur-sm">
+              <i class="fas fa-th-large"></i>
+              Explore Services
+            </a>
+          </div>
+          
+          <!-- Trust badges -->
+          <div class="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-slate-400 text-sm">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Fast Turnaround</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Expert PRO Team</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Government Approved</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right visual -->
+        <div class="relative hidden lg:flex justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="relative">
+            <!-- Glow rings -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="pulse-ring w-80 h-80"></div>
+              <div class="pulse-ring w-80 h-80" style="animation-delay: 0.7s;"></div>
+            </div>
+            
+            <!-- Main Lottie + Logo card -->
+            <div class="relative glass rounded-3xl p-6 shadow-2xl overflow-hidden">
+              <!-- Lottie Animation (Business Success / Documents) -->
+              <lottie-player
+                src="https://assets5.lottiefiles.com/packages/lf20_V9t630.json"
+                background="transparent"
+                speed="1"
+                style="width: 280px; height: 220px; margin: 0 auto;"
+                loop
+                autoplay>
+              </lottie-player>
+              
+              <div class="text-center -mt-4 pb-2">
+                <img src="logo.png" alt="Khalis Typing Center" class="w-28 h-auto mx-auto drop-shadow-xl mb-2">
+                <p class="text-white font-display font-bold text-lg">KHALIS</p>
+                <p class="text-green-400 text-xs tracking-widest">SERVICES • DOCUMENTATION • SOLUTIONS</p>
+              </div>
+            </div>
+            
+            <!-- Floating mini cards -->
+            <div class="absolute -top-6 -left-10 glass rounded-2xl px-4 py-3 shadow-xl animate-float" style="animation-delay: -2s;">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-file-alt text-green-400 text-sm"></i>
+                </div>
+                <div>
+                  <p class="text-white text-xs font-semibold">Typing & Docs</p>
+                  <p class="text-slate-400 text-[10px]">Same-day service</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="absolute -bottom-4 -right-8 glass rounded-2xl px-4 py-3 shadow-xl animate-float" style="animation-delay: -4s;">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-briefcase text-red-400 text-sm"></i>
+                </div>
+                <div>
+                  <p class="text-white text-xs font-semibold">Business Setup</p>
+                  <p class="text-slate-400 text-[10px]">End-to-end support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+      <i class="fas fa-chevron-down text-xl"></i>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES SECTION ========== -->
+  <section id="services" class="py-24 bg-khalis-cream relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-eyebrow inline-block text-khalis-green mb-3">What We Offer</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-khalis-ink mb-4">
+          Complete Solutions for<br>
+          <span class="text-khalis-green">Your Business & Documents</span>
+        </h2>
+        <p class="text-khalis-muted max-w-2xl mx-auto text-lg leading-relaxed">
+          From government paperwork to professional licensing and business formation — Khalis handles every step so you can focus on growth.
+        </p>
+      </div>
+      
+      <!-- Featured Services Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <!-- Service 1 -->
+        <div class="service-card card-shine rounded-3xl p-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-blue-500/25">
+            <i class="fas fa-certificate text-white text-xl"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-khalis-ink mb-2">Equivalency Certificate</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            UAE Ministry of Education Equivalency Certificate for foreign degrees. Document attestation to application submission.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-blue-50 text-blue-700 px-2.5 py-1 rounded-full">Data flow</span>
+            <span class="text-xs bg-blue-50 text-blue-700 px-2.5 py-1 rounded-full">Golden visa</span>
+          </div>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="service-card card-shine rounded-3xl p-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 bg-gradient-to-br from-slate-600 to-slate-800 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-slate-600/25">
+            <i class="fas fa-file-signature text-white text-xl"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-khalis-ink mb-2">Will Registration UAE</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Secure your future with professional Will Registration — personal, property, financial or guardianship wills.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded-full">Family Protection</span>
+            <span class="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded-full">Estate Planning</span>
+          </div>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="service-card card-shine rounded-3xl p-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-800 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-emerald-600/25">
+            <i class="fas fa-user-md text-white text-xl"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-khalis-ink mb-2">DOH Professional Licensing</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Department of Health Abu Dhabi licensing for medicine, dentistry, nursing, pharmacy & allied health professionals.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full">DHA</span>
+            <span class="text-xs bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full">Specialists</span>
+          </div>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="service-card card-shine rounded-3xl p-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-teal-700 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-cyan-500/25">
+            <i class="fas fa-handshake text-white text-xl"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-khalis-ink mb-2">PRO Services</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Affordable, reliable PRO in Abu Dhabi — visa processing, trade license, Emirates ID, document clearing & more.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-cyan-50 text-cyan-700 px-2.5 py-1 rounded-full">Visa</span>
+            <span class="text-xs bg-cyan-50 text-cyan-700 px-2.5 py-1 rounded-full">Trade License</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Full Services List -->
+      <div class="rounded-3xl p-8 md:p-12 bg-gradient-to-br from-khalis-dark via-khalis-ink to-emerald-950 shadow-2xl" data-aos="fade-up">
+        <h3 class="font-display text-3xl font-bold text-white text-center mb-2">We Offer Complete Support</h3>
+        <p class="text-white/60 text-center mb-10 max-w-2xl mx-auto">Set up your business in any UAE with professional step-by-step assistance. We handle all legal procedures for you.</p>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+          <!-- Column 1 -->
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Emirates ID Services</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>PRO Services</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Typing Services</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Business Setup</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Sponsorship Arrangement</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>HR Management</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>HAAD License</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Civil Defense</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Driving License (Online)</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Health Insurance (Daman)</span>
+            </div>
+          </div>
+          
+          <!-- Column 2 -->
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Immigration Services</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Ministry of Labour (Tasheel)</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Online License Services</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Tasheel Services</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>CNIA (CICPA) Pass Typing</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Legal & Normal Translation</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Certificate Attestation</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Letter Typing</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Vehicle Registration Renewal</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Judicial Department</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>TAMM Services</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>ICA / Emirates ID</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>MOHRE / ADJD / DED</span>
+            </div>
+          </div>
+          
+          <!-- Column 3 -->
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Online Visa</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Tourist Visa</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Air Ticketing</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Fine Payments</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Smart Pass</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>NORKA Services</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Passport Seva</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Bill Payments</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Stamps</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-200">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span>Designing</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-10">
+          <a href="#contact" class="btn-primary inline-flex items-center gap-2 text-white px-8 py-3.5 rounded-full font-semibold">
+            Request a Proposal
+            <i class="fas fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABU DHABI GOV SERVICES ========== -->
+  <section id="gov" class="py-24 bg-khalis-sand/50 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-eyebrow inline-block text-khalis-green mb-3">Abu Dhabi Government</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          Official Platforms We Handle<br>
+          <span class="text-khalis-green">TAMM · ICA · MOHRE · ADJD · DED</span>
+        </h2>
+        <p class="text-slate-600 max-w-2xl mx-auto text-lg">
+          End-to-end support on the main Abu Dhabi and federal portals — applications, renewals, payments and status follow-up without the queuearound.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <!-- TAMM -->
+        <div class="service-card card-shine rounded-3xl p-6 overflow-hidden" data-aos="fade-up" data-aos-delay="0">
+          <div class="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 mb-5 overflow-hidden">
+            <lottie-player
+              src="https://assets9.lottiefiles.com/packages/lf20_jcikwtux.json"
+              background="transparent"
+              speed="1"
+              style="width: 100%; height: 180px;"
+              loop
+              autoplay>
+            </lottie-player>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="bg-khalis-green text-white text-xs font-bold px-2.5 py-1 rounded-full">TAMM</span>
+            <span class="text-xs text-slate-500">Abu Dhabi Government Services</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-900 mb-2">TAMM Portal Services</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            All TAMM transactions — business licences, residency, utilities, fines, certificates and multi-service bundles through Abu Dhabi’s unified digital platform.
+          </p>
+          <ul class="space-y-1.5 text-sm text-slate-700">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Business & trade licence services</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Residence & family sponsorship</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Fines, payments & certificates</li>
+          </ul>
+        </div>
+
+        <!-- ICA -->
+        <div class="service-card card-shine rounded-3xl p-6 overflow-hidden" data-aos="fade-up" data-aos-delay="80">
+          <div class="rounded-2xl bg-gradient-to-br from-blue-950 to-slate-900 mb-5 overflow-hidden">
+            <lottie-player
+              src="https://assets5.lottiefiles.com/packages/lf20_V9t630.json"
+              background="transparent"
+              speed="1"
+              style="width: 100%; height: 180px;"
+              loop
+              autoplay>
+            </lottie-player>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">ICA</span>
+            <span class="text-xs text-slate-500">Federal Authority for Identity, Citizenship, Customs & Port Security</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-900 mb-2">ICA / Emirates ID & Residence</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Emirates ID, residence visas, entry permits, status amendment and ICA Smart Services applications prepared and submitted correctly the first time.
+          </p>
+          <ul class="space-y-1.5 text-sm text-slate-700">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Emirates ID issue & renewal</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Residence visa & entry permits</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Status change & cancellations</li>
+          </ul>
+        </div>
+
+        <!-- MOHRE -->
+        <div class="service-card card-shine rounded-3xl p-6 overflow-hidden" data-aos="fade-up" data-aos-delay="160">
+          <div class="rounded-2xl bg-gradient-to-br from-emerald-950 to-slate-900 mb-5 overflow-hidden">
+            <lottie-player
+              src="https://assets2.lottiefiles.com/packages/lf20_myejiggj.json"
+              background="transparent"
+              speed="1"
+              style="width: 100%; height: 180px;"
+              loop
+              autoplay>
+            </lottie-player>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">MOHRE</span>
+            <span class="text-xs text-slate-500">Ministry of Human Resources & Emiratisation</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-900 mb-2">MOHRE / Tasheel Labour</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Work permits, labour contracts, quota, establishment cards and Tasheel filings — complete MOHRE compliance for your company and employees.
+          </p>
+          <ul class="space-y-1.5 text-sm text-slate-700">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Work permits & labour contracts</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Establishment card & quota</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Tasheel typing & submissions</li>
+          </ul>
+        </div>
+
+        <!-- ADJD -->
+        <div class="service-card card-shine rounded-3xl p-6 overflow-hidden" data-aos="fade-up" data-aos-delay="240">
+          <div class="rounded-2xl bg-gradient-to-br from-amber-950 to-slate-900 mb-5 overflow-hidden">
+            <lottie-player
+              src="https://assets10.lottiefiles.com/packages/lf20_u25cckyh.json"
+              background="transparent"
+              speed="1"
+              style="width: 100%; height: 180px;"
+              loop
+              autoplay>
+            </lottie-player>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="bg-amber-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">ADJD</span>
+            <span class="text-xs text-slate-500">Abu Dhabi Judicial Department</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-900 mb-2">ADJD Legal & Court Services</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Notary, wills, powers of attorney, marriage contracts, case filings and judicial services through ADJD systems with proper document preparation.
+          </p>
+          <ul class="space-y-1.5 text-sm text-slate-700">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Notary & power of attorney</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Will registration & legalisation</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Court document typing & filing</li>
+          </ul>
+        </div>
+
+        <!-- DED -->
+        <div class="service-card card-shine rounded-3xl p-6 overflow-hidden" data-aos="fade-up" data-aos-delay="320">
+          <div class="rounded-2xl bg-gradient-to-br from-rose-950 to-slate-900 mb-5 overflow-hidden">
+            <lottie-player
+              src="https://assets3.lottiefiles.com/packages/lf20_puciaact.json"
+              background="transparent"
+              speed="1"
+              style="width: 100%; height: 180px;"
+              loop
+              autoplay>
+            </lottie-player>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="bg-rose-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">DED</span>
+            <span class="text-xs text-slate-500">Department of Economic Development</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-900 mb-2">DED Trade Licence & Business</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            New trade licences, name reservation, licence amendments, activity additions and renewals with Abu Dhabi DED / ADDED procedures.
+          </p>
+          <ul class="space-y-1.5 text-sm text-slate-700">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> New trade licence & name reservation</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Licence renewal & amendments</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Activity change & partner updates</li>
+          </ul>
+        </div>
+
+        <!-- Combined CTA card -->
+        <div class="service-card bg-gradient-to-br from-khalis-green to-emerald-700 rounded-3xl p-6 text-white flex flex-col justify-center" data-aos="fade-up" data-aos-delay="400">
+          <lottie-player
+            src="https://assets4.lottiefiles.com/packages/lf20_jbrw3hcz.json"
+            background="transparent"
+            speed="1"
+            style="width: 100%; height: 140px;"
+            loop
+            autoplay>
+          </lottie-player>
+          <h3 class="font-display font-bold text-xl mb-2">One desk for every portal</h3>
+          <p class="text-white/85 text-sm leading-relaxed mb-6">
+            Whether it is TAMM, ICA, MOHRE, ADJD or DED — Khalis prepares the file, submits on the right system and tracks the result for you.
+          </p>
+          <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-white text-emerald-800 hover:bg-green-50 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 w-fit">
+            Start a government request
+            <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== UAE VIDEOS ========== -->
+  <section id="uae-videos" class="py-24 bg-khalis-dark relative overflow-hidden">
+    <div class="pointer-events-none absolute -top-24 right-0 w-96 h-96 bg-khalis-green/20 rounded-full blur-3xl"></div>
+    <div class="pointer-events-none absolute bottom-0 left-0 w-80 h-80 bg-red-900/20 rounded-full blur-3xl"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="inline-block text-green-400 font-semibold text-sm tracking-wider uppercase mb-3">Learn the systems</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          UAE digital identity &amp; government videos
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto text-lg">
+          Official guides to UAE PASS and how digital identity unlocks TAMM, DubaiNow, ICA and more — the same portals Khalis helps you complete.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8 mb-10">
+        <!-- UAE PASS intro -->
+        <article class="bg-white/5 border border-white/10 rounded-3xl p-4 sm:p-6" data-aos="fade-up">
+          <div class="video-frame mb-5 shadow-2xl">
+            <iframe
+              src="https://www.youtube.com/embed/dio7-dmszK0"
+              title="UAE PASS — Digital Dubai"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-white mb-2">UAE PASS overview</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Official Digital Dubai film: one digital identity for government apps and websites across the UAE — login, verify, and sign without multiple passwords.
+          </p>
+        </article>
+
+        <!-- UAE PASS launch / national ID -->
+        <article class="bg-white/5 border border-white/10 rounded-3xl p-4 sm:p-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="video-frame mb-5 shadow-2xl">
+            <iframe
+              src="https://www.youtube.com/embed/8qtP7K9fRec"
+              title="UAE PASS national digital identity"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-white mb-2">National digital identity</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            How UAE PASS was introduced as the nationwide identity and signature solution for citizens, residents and visitors — the key to ICA, MOHRE and more.
+          </p>
+        </article>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-white/5 border border-white/10 rounded-2xl p-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="video-frame mb-4">
+            <iframe
+              src="https://www.youtube.com/embed/xJCZWOJGYR8"
+              title="Verify your UAE PASS account"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+          <h4 class="font-display text-lg font-bold text-white">Verify your account</h4>
+          <p class="text-slate-400 text-xs mt-1">Upgrade to a verified UAE PASS profile for full government access.</p>
+        </article>
+        <article class="bg-white/5 border border-white/10 rounded-2xl p-4" data-aos="fade-up" data-aos-delay="80">
+          <div class="video-frame mb-4">
+            <iframe
+              src="https://www.youtube.com/embed/oTd7YEg7trQ"
+              title="Sign documents digitally through UAE PASS"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+          <h4 class="font-display text-lg font-bold text-white">Digital signatures</h4>
+          <p class="text-slate-400 text-xs mt-1">Sign official documents on your phone — recognised across the UAE.</p>
+        </article>
+        <article class="bg-white/5 border border-white/10 rounded-2xl p-4" data-aos="fade-up" data-aos-delay="160">
+          <div class="video-frame mb-4">
+            <iframe
+              src="https://www.youtube.com/embed/YaUJTh2wpH0"
+              title="Request digital copy of official documents on UAE PASS"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+          <h4 class="font-display text-lg font-bold text-white">Digital documents</h4>
+          <p class="text-slate-400 text-xs mt-1">Request digital copies of official papers inside the UAE PASS app.</p>
+        </article>
+      </div>
+
+      <div class="mt-12 text-center" data-aos="fade-up">
+        <p class="text-slate-400 text-sm mb-4">Need help creating or verifying UAE PASS before a TAMM, ICA or MOHRE file?</p>
+        <a href="#contact" class="btn-primary inline-flex items-center gap-2 text-white px-8 py-3.5 rounded-full font-semibold">
+          Ask Khalis for guidance
+          <i class="fas fa-arrow-right text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS SECTION ========== -->
+  <section id="process" class="py-24 bg-gradient-to-br from-emerald-800 via-khalis-green to-teal-800 relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-10 w-64 h-64 border border-white rounded-full"></div>
+      <div class="absolute bottom-10 right-20 w-96 h-96 border border-white rounded-full"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="inline-block text-green-200 font-semibold text-sm tracking-wider uppercase mb-3">Simple Process</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          Three Simple Steps to<br>Grow Your Business
+        </h2>
+        <p class="text-green-100 max-w-xl mx-auto text-lg">
+          We make starting and managing your business in the UAE straightforward and stress-free.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 relative">
+        <!-- Step 1 -->
+        <div class="relative" data-aos="fade-up" data-aos-delay="0">
+          <div class="bg-white rounded-2xl p-6 shadow-2xl h-full flex flex-col">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">Step 1</span>
+            </div>
+            <!-- Lottie: Search / Find -->
+            <div class="flex justify-center -my-2">
+              <lottie-player
+                src="https://assets9.lottiefiles.com/packages/lf20_uu0x8lqv.json"
+                background="transparent"
+                speed="1"
+                style="width: 140px; height: 140px;"
+                loop
+                autoplay>
+              </lottie-player>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3 text-center">Find Your Trade Name & Issue License</h3>
+            <p class="text-slate-600 leading-relaxed text-center text-sm">
+              Choose a unique trade name and secure your trade license with our expert guidance. We handle name reservation and licensing paperwork.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="relative" data-aos="fade-up" data-aos-delay="150">
+          <div class="bg-white rounded-2xl p-6 shadow-2xl h-full flex flex-col">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">Step 2</span>
+            </div>
+            <!-- Lottie: Documents / Paperwork -->
+            <div class="flex justify-center -my-2">
+              <lottie-player
+                src="https://assets5.lottiefiles.com/packages/lf20_qp1spz4v.json"
+                background="transparent"
+                speed="1"
+                style="width: 140px; height: 140px;"
+                loop
+                autoplay>
+              </lottie-player>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3 text-center">Complete Documentation</h3>
+            <p class="text-slate-600 leading-relaxed text-center text-sm">
+              Ensure all necessary documents, including partner’s agreements and license issuance, are seamlessly managed by our professional team.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="relative" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-white rounded-2xl p-6 shadow-2xl h-full flex flex-col">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">Step 3</span>
+            </div>
+            <!-- Lottie: Growth / Marketing -->
+            <div class="flex justify-center -my-2">
+              <lottie-player
+                src="https://assets2.lottiefiles.com/packages/lf20_s6bqfrb5.json"
+                background="transparent"
+                speed="1"
+                style="width: 140px; height: 140px;"
+                loop
+                autoplay>
+              </lottie-player>
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3 text-center">Marketing & Promotions</h3>
+            <p class="text-slate-600 leading-relaxed text-center text-sm">
+              Leverage effective marketing strategies to launch and grow your business successfully with our continued support.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
+        <a href="#contact" class="inline-flex items-center gap-2 bg-white text-emerald-700 hover:bg-green-50 px-8 py-4 rounded-full font-bold text-base transition-all duration-300 shadow-xl hover:scale-105">
+          <i class="fas fa-comments"></i>
+          Start Your Business Journey Today
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="py-24 bg-khalis-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+          <span class="inline-block text-khalis-green font-semibold text-sm tracking-wider uppercase mb-3">About Khalis</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
+            Your Trusted Business Partner<br>
+            <span class="text-khalis-green">in the UAE</span>
+          </h2>
+          <p class="text-slate-600 text-lg leading-relaxed mb-6">
+            We build your ideal business solution with passion for lasting success. Located in the heart of Abu Dhabi, Khalis Typing Center has become the go-to partner for individuals and companies needing reliable documentation, PRO services, and complete business setup support.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-8">
+            Whether you need fast typing, certificate attestation, visa processing, professional licensing, or full company formation — our experienced team delivers with accuracy, transparency and genuine care for every client.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-slate-50 rounded-2xl p-5">
+              <div class="text-3xl font-display font-bold text-khalis-green mb-1">4.9★</div>
+              <div class="text-slate-600 text-sm">Google Rating</div>
+            </div>
+            <div class="bg-slate-50 rounded-2xl p-5">
+              <div class="text-3xl font-display font-bold text-khalis-green mb-1">858+</div>
+              <div class="text-slate-600 text-sm">Happy Clients</div>
+            </div>
+            <div class="bg-slate-50 rounded-2xl p-5">
+              <div class="text-3xl font-display font-bold text-khalis-green mb-1">30+</div>
+              <div class="text-slate-600 text-sm">Services Offered</div>
+            </div>
+            <div class="bg-slate-50 rounded-2xl p-5">
+              <div class="text-3xl font-display font-bold text-khalis-green mb-1">Fast</div>
+              <div class="text-slate-600 text-sm">Same-Day Options</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative" data-aos="fade-left">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-800 via-emerald-900 to-slate-900">
+            <div class="aspect-[4/3] flex flex-col items-center justify-center relative p-6">
+              <!-- Lottie: Business Handshake / Partnership -->
+              <lottie-player
+                src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"
+                background="transparent"
+                speed="1"
+                style="width: 260px; height: 200px;"
+                loop
+                autoplay>
+              </lottie-player>
+              <div class="text-center -mt-2">
+                <img src="logo.png" alt="Khalis" class="w-28 mx-auto mb-2 drop-shadow-xl">
+                <p class="text-white font-display font-bold text-lg">KHALIS TYPING CENTER</p>
+                <p class="text-green-300 text-sm">Abu Dhabi, UAE</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Floating badge -->
+          <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 flex items-center gap-4">
+            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-khalis-green text-xl"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">Visit Us</p>
+              <p class="text-slate-500 text-xs">Muroor Road, Abu Dhabi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REVIEWS SECTION ========== -->
+  <section id="reviews" class="py-24 bg-khalis-sand/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="inline-block text-khalis-green font-semibold text-sm tracking-wider uppercase mb-3">Client Love</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          Rated <span class="text-khalis-green">4.9★</span> by 858+ Clients
+        </h2>
+        <p class="text-slate-600 max-w-xl mx-auto">
+          Real feedback from people who trusted us with their documents, visas and business needs.
+        </p>
+        <a href="https://g.page/r/CbjI7vnA12xFEBM/review" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-4 text-khalis-green font-semibold hover:underline">
+          <i class="fab fa-google"></i> Leave a Google Review
+        </a>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Review 1 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100" data-aos="fade-up" data-aos-delay="0">
+          <div class="flex items-center gap-1 mb-4">
+            <i class="fas fa-star star-filled"></i>
+            <i class="fas fa-star star-filled"></i>
+            <i class="fas fa-star star-filled"></i>
+            <i class="fas fa-star star-filled"></i>
+            <i class="fas fa-star star-filled"></i>
+          </div>
+          <p class="text-slate-700 leading-relaxed mb-5">
+            “Excellent service at Khalis Typing, Muroor Road, Abu Dhabi. The staff were professional, friendly, and very efficient. They helped me process my Indian passport renewal application quickly and smoothly.”
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">N</div>
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">Nishad.k Nisha</p>
+              <p class="text-slate-500 text-xs">1 month ago</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Review 2 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-1 mb-4">
+            <i class="fas fa-star star-filled"></i>
+            <i class="fas fa-star star-filled"></i>
+            <i class="fas fa-star star-filled"></i>
+            <i class="fas fa-star star-filled"></i>
+            <i class="fas fa-star star-filled"></i>
+          </div>
+          <p class="text-slate-700 leading-relaxed mb-5">
+            “Excellent service at Khalis Typing, Muroor, Abu Dhabi! The staff are professional, friendly, and very efficient. Highly recommended for all documentation and PRO needs.”
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 font-bold">A</div>
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">Abdul Salam Mondal</p>
+              <p class="text-slate-500 text-xs">1 month ago</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Review 3 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center gap-1 mb-4">
+            <i class="fas fa-star star-filled"></i>
+            <i class="fas fa-star star-filled"></i>
+            <i class="fas fa-star star-filled"></i>
+            <i class="fas fa-star star-filled"></i>
+            <i class="fas fa-star star-filled"></i>
+          </div>
+          <p class="text-slate-700 leading-relaxed mb-5">
+            “Very efficient staff and smooth document handling. Family visa process and certificate attestation were completed without any hassle. Best typing center in the area!”
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 font-bold">K</div>
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">Satisfied Client</p>
+              <p class="text-slate-500 text-xs">Recent</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tags from Google -->
+      <div class="flex flex-wrap justify-center gap-3 mt-10" data-aos="fade-up">
+        <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full text-sm">family visa process (31)</span>
+        <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full text-sm">certificate attestation (10)</span>
+        <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full text-sm">efficient staff (36)</span>
+        <span class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full text-sm">document handling (18)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" class="py-24 bg-khalis-dark relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-khalis-green rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-khalis-red rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="inline-block text-green-400 font-semibold text-sm tracking-wider uppercase mb-3">Get In Touch</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+          Ready to Get Started?
+        </h2>
+        <p class="text-slate-400 max-w-xl mx-auto">
+          Contact us today for a free consultation. Our team is ready to assist with all your documentation and business needs.
+        </p>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div data-aos="fade-right">
+          <div class="space-y-6">
+            <!-- Address -->
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-map-marker-alt text-green-400"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold mb-1">Our Location</h4>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                  Muroor 31 signal - Zafaranah st<br>
+                  Al Sa`Adah - Zone 1 - Abu Dhabi<br>
+                  United Arab Emirates
+                </p>
+                <a href="https://share.google/qTWqojAQNH4zmFig8" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-green-400 text-sm mt-2 hover:underline">
+                  Open in Google Maps <i class="fas fa-external-link-alt text-xs"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Phone -->
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-phone-alt text-green-400"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold mb-1">Call / WhatsApp</h4>
+                <a href="tel:+971501201818" class="text-green-400 text-lg font-semibold hover:underline">050 120 1818</a>
+              </div>
+            </div>
+            
+            <!-- Email -->
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-envelope text-green-400"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold mb-1">Email</h4>
+                <a href="mailto:info@khalisglobal.com" class="text-green-400 hover:underline">info@khalisglobal.com</a>
+              </div>
+            </div>
+            
+            <!-- Hours -->
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-clock text-green-400"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold mb-2">Working Hours</h4>
+                <div class="text-slate-400 text-sm space-y-1">
+                  <div class="flex justify-between gap-8"><span>Monday – Thursday</span><span class="text-white">8 AM – 9:30 PM</span></div>
+                  <div class="flex justify-between gap-8"><span>Friday</span><span class="text-white">8 AM – 12 PM, 3 – 9:30 PM</span></div>
+                  <div class="flex justify-between gap-8"><span>Saturday</span><span class="text-white">8 AM – 8:30 PM</span></div>
+                  <div class="flex justify-between gap-8"><span>Sunday</span><span class="text-red-400">Closed</span></div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Socials -->
+            <div class="pt-4">
+              <h4 class="text-white font-semibold mb-3">Follow Us</h4>
+              <div class="flex gap-3">
+                <a href="https://www.instagram.com/khalisbusiness" target="_blank" rel="noopener" class="w-11 h-11 bg-white/10 hover:bg-pink-600 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1QFZj32Wsa/" target="_blank" rel="noopener" class="w-11 h-11 bg-white/10 hover:bg-blue-600 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.tiktok.com/@khalisbusiness" target="_blank" rel="noopener" class="w-11 h-11 bg-white/10 hover:bg-black rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110">
+                  <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://g.page/r/CbjI7vnA12xFEBM/review" target="_blank" rel="noopener" class="w-11 h-11 bg-white/10 hover:bg-red-500 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110">
+                  <i class="fab fa-google"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div data-aos="fade-left">
+          <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+            <h3 class="font-display text-xl font-bold text-white mb-6">Send Us a Message</h3>
+            <form id="contactForm" class="space-y-5">
+              <div>
+                <label class="block text-slate-300 text-sm mb-2">Full Name</label>
+                <input type="text" name="name" required class="form-input w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-green-500 transition" placeholder="Your name">
+              </div>
+              <div>
+                <label class="block text-slate-300 text-sm mb-2">Phone / WhatsApp</label>
+                <input type="tel" name="phone" required class="form-input w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-green-500 transition" placeholder="05X XXX XXXX">
+              </div>
+              <div>
+                <label class="block text-slate-300 text-sm mb-2">Email</label>
+                <input type="email" name="email" class="form-input w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-green-500 transition" placeholder="you@example.com">
+              </div>
+              <div>
+                <label class="block text-slate-300 text-sm mb-2">Service Needed</label>
+                <select name="service" class="form-input w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-green-500 transition">
+                  <option value="" class="bg-slate-800">Select a service</option>
+                  <option value="PRO Services" class="bg-slate-800">PRO Services</option>
+                  <option value="TAMM Services" class="bg-slate-800">TAMM Services</option>
+                  <option value="ICA / Emirates ID" class="bg-slate-800">ICA / Emirates ID</option>
+                  <option value="MOHRE / Tasheel" class="bg-slate-800">MOHRE / Tasheel</option>
+                  <option value="ADJD Legal Services" class="bg-slate-800">ADJD Legal Services</option>
+                  <option value="DED Trade Licence" class="bg-slate-800">DED Trade Licence</option>
+                  <option value="Typing / Documentation" class="bg-slate-800">Typing / Documentation</option>
+                  <option value="Business Setup" class="bg-slate-800">Business Setup</option>
+                  <option value="Visa Processing" class="bg-slate-800">Visa Processing</option>
+                  <option value="Certificate Attestation" class="bg-slate-800">Certificate Attestation</option>
+                  <option value="Equivalency Certificate" class="bg-slate-800">Equivalency Certificate</option>
+                  <option value="DOH Licensing" class="bg-slate-800">DOH Professional Licensing</option>
+                  <option value="Will Registration" class="bg-slate-800">Will Registration</option>
+                  <option value="Other" class="bg-slate-800">Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-slate-300 text-sm mb-2">Message</label>
+                <textarea name="message" rows="4" class="form-input w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-green-500 transition resize-none" placeholder="Tell us how we can help..."></textarea>
+              </div>
+              <button type="submit" id="submitBtn" class="w-full bg-khalis-green hover:bg-green-500 text-white font-semibold py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 hover:scale-[1.02]">
+                <span id="btnText">Send Message</span>
+                <i class="fas fa-paper-plane" id="btnIcon"></i>
+              </button>
+            </form>
+            <div id="formSuccess" class="hidden text-center mt-4">
+              <lottie-player
+                src="https://assets2.lottiefiles.com/packages/lf20_jbrw3hcz.json"
+                background="transparent"
+                speed="1"
+                style="width: 160px; height: 160px; margin: 0 auto;"
+                autoplay>
+              </lottie-player>
+              <p class="text-green-400 font-medium text-lg -mt-4">Thank you! We’ll contact you shortly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-khalis-dark py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-10 mb-10">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="logo.png" alt="Khalis" class="h-10">
+            <div>
+              <span class="font-display font-bold text-white">KHALIS</span>
+              <span class="block text-xs text-green-400 -mt-0.5">TYPING CENTER</span>
+            </div>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Your trusted business partner in UAE. We build your ideal business solution with passion for lasting success.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <div class="space-y-2 text-sm">
+            <a href="#services" class="block text-slate-400 hover:text-green-400 transition">Services</a>
+            <a href="#gov" class="block text-slate-400 hover:text-green-400 transition">Gov Services</a>
+            <a href="#uae-videos" class="block text-slate-400 hover:text-green-400 transition">UAE Videos</a>
+            <a href="#process" class="block text-slate-400 hover:text-green-400 transition">How It Works</a>
+            <a href="#about" class="block text-slate-400 hover:text-green-400 transition">About Us</a>
+            <a href="#reviews" class="block text-slate-400 hover:text-green-400 transition">Reviews</a>
+            <a href="#contact" class="block text-slate-400 hover:text-green-400 transition">Contact</a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <div class="space-y-2 text-sm text-slate-400">
+            <p><i class="fas fa-phone-alt text-green-400 mr-2 w-4"></i> 050 120 1818</p>
+            <p><i class="fas fa-envelope text-green-400 mr-2 w-4"></i> info@khalisglobal.com</p>
+            <p><i class="fas fa-map-marker-alt text-green-400 mr-2 w-4"></i> Muroor Road, Abu Dhabi</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-slate-500 text-sm">© 2026 Khalis Typing Center. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="https://www.instagram.com/khalisbusiness" target="_blank" class="text-slate-500 hover:text-pink-400 transition"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1QFZj32Wsa/" target="_blank" class="text-slate-500 hover:text-blue-400 transition"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.tiktok.com/@khalisbusiness" target="_blank" class="text-slate-500 hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/971501201818" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:brightness-110 rounded-full flex items-center justify-center text-white shadow-2xl shadow-green-900/40 transition-all duration-300 hover:scale-110" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 80
+    });
+    
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add('nav-solid');
+        navbar.classList.remove('bg-transparent');
+      } else {
+        navbar.classList.remove('nav-solid');
+        navbar.classList.add('bg-transparent');
+      }
+    });
+    
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let menuOpen = false;
+    
+    menuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.remove('max-h-0', 'opacity-0');
+        mobileMenu.classList.add('max-h-96', 'opacity-100');
+        menuBtn.innerHTML = '<i class="fas fa-times text-xl"></i>';
+      } else {
+        mobileMenu.classList.add('max-h-0', 'opacity-0');
+        mobileMenu.classList.remove('max-h-96', 'opacity-100');
+        menuBtn.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+      }
+    });
+    
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.classList.add('max-h-0', 'opacity-0');
+        mobileMenu.classList.remove('max-h-96', 'opacity-100');
+        menuBtn.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+      });
+    });
+    
+    // Contact form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const btnText = document.getElementById('btnText');
+      const btnIcon = document.getElementById('btnIcon');
+      
+      btn.disabled = true;
+      btnText.textContent = 'Sending...';
+      btnIcon.className = 'spinner';
+      
+      // Simulate send (replace with real endpoint later)
+      setTimeout(() => {
+        document.getElementById('contactForm').classList.add('hidden');
+        const success = document.getElementById('formSuccess');
+        success.classList.remove('hidden');
+        // Restart Lottie if needed
+        const player = success.querySelector('lottie-player');
+        if (player) player.play();
+      }, 1400);
+    });
+  </script>
+</body>
+</html>
