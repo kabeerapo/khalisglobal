@@ -31,11 +31,11 @@ const VIDEO_SCHEMA = {
   name: "Khalis Typing Center Abu Dhabi — Emirates ID, Typing & PRO Services",
   description:
     "Khalis Typing Center on Muroor Road, Abu Dhabi: Emirates ID services, official typing, PRO support, business setup, and expert consultation. Partner with Khalis.",
-  thumbnailUrl: "/poster-office.webp",
+  thumbnailUrl: "/added-hero.webp",
   uploadDate: "2026-08-29",
-  duration: "PT30S",
-  contentUrl: "/khalis-office.mp4",
-  embedUrl: "/#video",
+  duration: "PT8S",
+  contentUrl: "/added-hero.mp4",
+  embedUrl: "/#home",
   transcript:
     "Khalis Typing Center in Abu Dhabi. Emirates ID services, typing services, PRO support, business setup, Tasheel, Tadbeer, legal translation, and expert business consultation. Partner with Khalis — Muroor Road.",
 };
